@@ -3,9 +3,11 @@ import '../src/App.scss'
 import Header from './components/Header/Header';
 import SelectedVideo from './components/SelectedVideo/SelectedVideo';
 import VideoList from './components/VideoList/VideoList';
+import Comments from './components/Comments/Comments';
 import { useState } from 'react';
-import VideosJson from './data/videos.json';
+import VideosJson from './data/video-details.json';
 import { setSelectionRange } from '@testing-library/user-event/dist/utils';
+import '../src/styles/partials/_global.scss';
 
 
 
@@ -25,6 +27,7 @@ function handleVideoSelection(id) {
     <div className='App'>
       <Header />
       <SelectedVideo selectedVideo={selectedVideo} />
+      <Comments videoData={videoData} selectedVideo={selectedVideo} handleVideoSelection={handleVideoSelection}  />
       <VideoList videoData={videoData} selectedVideo={selectedVideo} handleVideoSelection={handleVideoSelection} />
     </div>
   );

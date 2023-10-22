@@ -1,3 +1,32 @@
-.video-list__image {
-    height: 200px;
+.video-list {
+    list-style-type: none;
+    padding-inline-start: 0;
+
+    &__title {
+        border-top: 1px solid #e1e1e1;
+        padding-top: 24px;
+        padding-bottom: 16px;
+        color: #afafaf;
+    }
+}
+
+.video-list__item{
+    padding-bottom: 16px;
+}
+
+.image__container {
+    width: 100%;
+}
+.images {
+    height: 150px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.item__container {
+    display: flex;
+}
+
+.title__container {
+    padding-inline-start: 16px;
 }

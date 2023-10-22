@@ -3,3 +3,39 @@
     width: 100%;
 }
 
+.hero-icon {
+    position: relative;
+    top: -8px;
+    left: 24px;
+}
+
+.hero__container {
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 20px;
+    justify-content: space-between;
+    border-bottom: 1px solid #e1e1e1;
+    border-top: 1px solid #e1e1e1;
+    padding-top: 16px;
+}
+
+.hero__container > span {
+    width: 150px;
+}
+
+.hero__sub-title {
+    padding-bottom: 16px;
+
+    &--bold {
+        font-weight: 600;
+    }
+}
+
+.hero__description {
+    line-height: 20px;
+}
+
+.sub-title--color {
+    color: #afafaf;
+}
+
