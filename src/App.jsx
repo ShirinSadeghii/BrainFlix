@@ -7,7 +7,6 @@ import Comments from './components/Comments/Comments';
 import { useState } from 'react';
 import VideosJson from './data/video-details.json';
 import { setSelectionRange } from '@testing-library/user-event/dist/utils';
-import '../src/styles/partials/_global.scss';
 
 
 

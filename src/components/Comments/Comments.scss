@@ -1,6 +1,77 @@
+.new-comment {
+    display: flex;
+    justify-content: space-between;
+
+    &__title {
+        padding: 16px 0 16px;
+        margin-block-end: 0;
+        margin-block-start: 0;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        width: 85%;
+    }
+
+    &__label {
+        color: #afafaf;
+        font-weight: 700;
+        padding-top: 16px;
+    }
+
+    &__text {
+        border-radius: 0.25rem;
+        width: 72vw;
+        height: 6rem;
+        padding: 0.75rem;
+        resize: none;
+        background-color: #fafafa;
+        border: 1px solid #e1e1e1;
+        font-family: "Avenir";
+        margin-bottom: 1rem;
+        margin-top: 6px;
+    }
+
+    &__button {
+        background-color: #0095FF;
+        color: white;
+        display: flex;
+        width: 78vw;
+        justify-content: center;
+        padding: 1rem;
+        border-radius: 0.25rem;
+        border-style: none;
+        font-size: 1.125rem;
+        font-weight: 700;
+    }
+}
+
+textarea:focus {
+    border: 2px solid #0095FF;
+}
+
+
+.add-comment-btn {
+    height: 1.5rem;
+    width: 16%;
+    position: relative;
+    top: -38px;
+}
+
+::placeholder {
+    color: black;
+    font-size: 1rem;
+  }
+
+.avatar__container {
+    transform: translateY(32px);
+}
+
 .comment__list {
     list-style-type: none;
     padding-inline-start: 0;
+    margin-block-end: 0;
 }
 
 .comment__item {

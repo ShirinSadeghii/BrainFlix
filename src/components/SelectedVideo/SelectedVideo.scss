@@ -12,7 +12,6 @@
 .hero__container {
     display: flex;
     flex-wrap: wrap;
-    line-height: 20px;
     justify-content: space-between;
     border-bottom: 1px solid #e1e1e1;
     border-top: 1px solid #e1e1e1;
@@ -20,19 +19,19 @@
 }
 
 .hero__container > span {
-    width: 150px;
+    width: 40%;
 }
 
 .hero__sub-title {
     padding-bottom: 16px;
 
     &--bold {
-        font-weight: 600;
+        font-weight: 700;
     }
 }
 
 .hero__description {
-    line-height: 20px;
+    // line-height: 20px;
 }
 
 .sub-title--color {
