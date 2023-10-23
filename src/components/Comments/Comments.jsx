@@ -19,7 +19,7 @@ const commentDate = date.toLocaleDateString("en-US");
                 <label className='new-comment__label'>JOIN THE CONVERSATION</label>
                 <textarea className='new-comment__text' name="comment" placeholder='Add a new comment' required error></textarea>
                 <button className='new-comment__button'>COMMENT</button>
-                <img src={comment} alt="add comment" className='add-comment-btn' />
+                <img src={comment} alt="add comment" className='add-comment-logo' />
             </form>
         </div>
         <ul className="comment__list">

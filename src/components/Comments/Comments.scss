@@ -45,24 +45,28 @@
         font-size: 1.125rem;
         font-weight: 700;
     }
+
+    &__button:hover {
+        background-color:#0065AD ;
+    }
 }
 
 textarea:focus {
     border: 2px solid #0095FF;
 }
 
+::placeholder {
+    color: black;
+    font-size: 1rem;
+}
 
-.add-comment-btn {
+.add-comment-logo {
     height: 1.5rem;
     width: 16%;
     position: relative;
     top: -38px;
 }
 
-::placeholder {
-    color: black;
-    font-size: 1rem;
-  }
 
 .avatar__container {
     transform: translateY(32px);
