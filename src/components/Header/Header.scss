@@ -8,6 +8,12 @@
 
     @include tablet {
         flex-direction: row;
+        padding: 0;
+
+    }
+
+    @include desktop {
+        padding: 0 8rem 0 8rem;
     }
 
     &__form {
@@ -38,11 +44,12 @@
 }
 
 .nav__logo {
-  height: 25px;
-  width: 120px;
+  height: 1.5rem;
+  width: 7.5rem;
 
   @include tablet {
     height: 3rem;
+    margin-left: 3rem;
   }
 }
 
@@ -56,7 +63,11 @@
 
     @include tablet {
         position: relative;
-        left: 45%;
+        left: 36%;
+
+        @include desktop {
+            left: 50%;
+        }
     }
 }
 
@@ -73,8 +84,12 @@
     padding-inline-start: 16px;
 
     @include tablet {
-        width: 250px;
-        right: 12%;
+        width: 15.5rem;
+        right: 16%;
+    }
+
+    @include desktop {
+        right: 8%;
     }
 }
 

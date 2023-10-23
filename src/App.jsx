@@ -7,6 +7,7 @@ import Comments from './components/Comments/Comments';
 import { useState } from 'react';
 import VideosJson from './data/video-details.json';
 import { setSelectionRange } from '@testing-library/user-event/dist/utils';
+import SelectedDescription from './components/SelectedDescription/SelectedDescription';
 
 
 
@@ -15,8 +16,6 @@ function App() {
 const [videoData, setVideoData] = useState(VideosJson)
 const [selectedVideo, setSelectedVideo] = useState(VideosJson[0])
 
-// console.log("selectedVideo: ", selectedVideo);
-// console.log(selectedVideo.image);
 function handleVideoSelection(id) {
   const foundVideo = videoData.find((video) => video.id === id);
   setSelectedVideo(foundVideo);
@@ -26,8 +25,15 @@ function handleVideoSelection(id) {
     <div className='App'>
       <Header />
       <SelectedVideo selectedVideo={selectedVideo} />
-      <Comments videoData={videoData} selectedVideo={selectedVideo} handleVideoSelection={handleVideoSelection}  />
-      <VideoList videoData={videoData} selectedVideo={selectedVideo} handleVideoSelection={handleVideoSelection} />
+      <div className='FlexParent'>
+        <div className='FlexBox1'>
+          <SelectedDescription selectedVideo={selectedVideo} />
+          <Comments videoData={videoData} selectedVideo={selectedVideo} handleVideoSelection={handleVideoSelection}  />
+        </div>
+        <div className='FlexBox2'>
+          <VideoList videoData={videoData} selectedVideo={selectedVideo} handleVideoSelection={handleVideoSelection} />
+        </div>
+      </div>
     </div>
   );
 }

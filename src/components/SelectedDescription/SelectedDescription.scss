@@ -1,0 +1,92 @@
+@use '../../styles/partials/mixins' as *;
+
+.hero {
+    @include desktop {
+        height: 18rem;
+    }
+
+    &__title {
+        @include tablet {
+            padding-top: 36px;
+            padding-bottom: 24px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+            font-size: 33px;
+        }
+    }
+
+    &__description {
+        @include tablet {
+            line-height: 24px;
+            font-size: 18px;
+        }
+    }
+
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        border-bottom: 1px solid #e1e1e1;
+        border-top: 1px solid #e1e1e1;
+        padding-top: 16px;
+    
+        @include tablet {
+            flex-wrap: nowrap;
+            border-top: none;
+            padding-top: 0;
+        }
+    }
+
+    &__sub-container {
+        width: 100px;
+        display: flex;
+        flex-wrap: wrap;
+    
+        @include tablet {
+            display: flex;
+            min-width: 26%;
+            justify-content: space-between;
+    
+        }
+    
+        @include desktop {
+            width: 32%;
+        }
+    }
+
+    &__sub-continer--width {
+        @include tablet {
+            width: 38%;
+        }
+    
+        @include desktop {
+            width: 40%;
+        }
+    }
+
+    &-icon {
+    position: relative;
+    top: -8px;
+    left: -8px;
+    
+    @include tablet {
+    left: 16px;
+    }
+    }   
+}
+
+
+
+.hero__sub-title {
+    padding-bottom: 16px;
+
+    &--bold {
+        font-weight: 700;
+    }
+}
+    
+
+.sub-title--color {
+    color: #afafaf;
+}
+
