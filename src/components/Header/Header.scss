@@ -1,30 +1,49 @@
+@use "../../styles/partials/mixins" as *;
+
 .nav {
     display: flex;
     align-items: center;
     flex-direction: column;
     padding: 24px 0 16px;
 
+    @include tablet {
+        flex-direction: row;
+    }
+
     &__form {
         display: flex;
         width: 100%;
         justify-content: space-between;
         padding: 16px 0;
+
+        @include tablet {
+            justify-content: center;
+        }
     }
 
     &__input {
-        min-width: 70%;
+        min-width: 75%;
         min-height: 36px;
         border: 1px solid #E1E1E1;
         border-radius: 4px;
         background-color: #fafafa;
         position: relative;
         padding-inline-start: 50px;
+
+        @include tablet {
+            width: 250px;
+            min-width: 0;
+        }
     }
 }
 
 .nav__logo {
   height: 25px;
   width: 120px;
+
+  @include tablet {
+    height: 3rem;
+  }
 }
 
 .mohan {
@@ -33,6 +52,12 @@
     border-radius: 26px;
     object-fit: cover;
     object-position: left;
+    margin-left: 0.5rem;
+
+    @include tablet {
+        position: relative;
+        left: 45%;
+    }
 }
 
 .nav__button {
@@ -46,6 +71,11 @@
     border: none;
     font-size: 16px;
     padding-inline-start: 16px;
+
+    @include tablet {
+        width: 250px;
+        right: 12%;
+    }
 }
 
 .upload-btn {
@@ -58,4 +88,10 @@
     position: absolute;
     top: 78px;
     left: 36px;
+
+    @include tablet {
+        position: relative;
+        top: 0;
+        left: -18rem;
+    }
 }

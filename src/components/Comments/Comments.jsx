@@ -13,13 +13,18 @@ const commentDate = date.toLocaleDateString("en-US");
         <h3 className='new-comment__title'>3 Comments</h3>
         <div className='new-comment'>
             <div className='avatar__container'>
-                <img src={mohan} alt="mohan" className='mohan' />
+                <img src={mohan} alt="mohan" className='mohan mohan--remove-margin' />
             </div>
             <form className='new-comment__form'>
-                <label className='new-comment__label'>JOIN THE CONVERSATION</label>
-                <textarea className='new-comment__text' name="comment" placeholder='Add a new comment' required error></textarea>
-                <button className='new-comment__button'>COMMENT</button>
-                <img src={comment} alt="add comment" className='add-comment-logo' />
+                <div className='new-comment__container'>
+                    <label className='new-comment__label'>JOIN THE CONVERSATION</label>
+                    <textarea className='new-comment__text' name="comment" placeholder='Add a new comment' required></textarea>
+                </div>
+                <div className='button__container'>
+                    <button className='new-comment__button'>COMMENT</button>
+                    <img src={comment} alt="add comment" className='add-comment-logo' />
+                </div>
+               
             </form>
         </div>
         <ul className="comment__list">
@@ -30,7 +35,7 @@ const commentDate = date.toLocaleDateString("en-US");
                         <span className='name--bold' >{props.selectedVideo.comments[0].name}</span>
                         <span className='sub-title--color'>{commentDate}</span>
                     </div>
-                    <p>{props.selectedVideo.comments[0].comment}</p>
+                    <p className='comment__paragraph'>{props.selectedVideo.comments[0].comment}</p>
                 </div>
             </li>
 
@@ -41,7 +46,7 @@ const commentDate = date.toLocaleDateString("en-US");
                         <span className='name--bold'>{props.selectedVideo.comments[1].name}</span>
                         <span className='sub-title--color'>{commentDate}</span>
                     </div>
-                    <p>{props.selectedVideo.comments[1].comment}</p>
+                    <p className='comment__paragraph'>{props.selectedVideo.comments[1].comment}</p>
                 </div>
             </li>
 
@@ -52,7 +57,7 @@ const commentDate = date.toLocaleDateString("en-US");
                         <span className='name--bold'>{props.selectedVideo.comments[2].name}</span>
                         <span className='sub-title--color'>{commentDate}</span>
                     </div>
-                    <p>{props.selectedVideo.comments[2].comment}</p>
+                    <p className='comment__paragraph'>{props.selectedVideo.comments[2].comment}</p>
                 </div>
             </li>
         </ul>

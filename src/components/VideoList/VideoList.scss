@@ -1,3 +1,5 @@
+@use "../../styles/partials/mixins" as *;
+
 .video-list {
     list-style-type: none;
     padding-inline-start: 0;
@@ -32,4 +34,14 @@
 
 .title__container {
     padding-inline-start: 16px;
+
+    @include tablet {
+        width: 30%;
+    }
+}
+
+.title__paragraph {
+    @include tablet {
+        font-size: 18px;
+    }
 }
