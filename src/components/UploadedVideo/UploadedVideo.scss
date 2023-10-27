@@ -1,0 +1,75 @@
+
+.video-upload {
+    padding: 0 1rem 0;
+    border-top: 1px solid #E1E1E1;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    &__label {
+        color: #afafaf;
+        padding-bottom: 4px;
+        padding-top: 16px;
+        font-weight: 700;
+
+        &--padding {
+            padding-top: 24px;
+        }
+    }
+
+    &__thumbnail {
+        width: 100%;
+        border-radius: 8px;
+        background-color:#E1E1E1 ;
+    }
+
+    &__text {
+        background-color: #fafafa;
+        border-radius: 8px;
+        border: 1px solid #E1E1E1;
+        height: 36px;
+        padding: 0.75rem;
+
+        &--height {
+            height: 6rem;
+            resize: none;
+            margin-bottom: 2rem;
+            margin-top: 4px;
+            padding: 0.75rem;
+            font-family: 'Avenir';
+        }
+    }
+
+    &__button {
+        background-color: #0095FF;
+        color: white;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        padding: 1rem;
+        border-radius: 0.25rem;
+        border-style: none;
+        font-size: 1.125rem;
+        font-weight: 700;
+    }
+}
+
+.video__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.button__container {
+    position: relative;
+}
+
+.cancel-btn {
+    display: flex;
+    justify-content: center;
+    color: #0095FF;
+    font-weight: 700;
+    padding-top: 25px;
+}

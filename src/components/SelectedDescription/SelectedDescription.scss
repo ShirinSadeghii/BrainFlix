@@ -17,7 +17,7 @@
 
     &__description {
         @include tablet {
-            line-height: 24px;
+            line-height: 26px;
             font-size: 18px;
         }
     }
@@ -54,9 +54,9 @@
         }
     }
 
-    &__sub-continer--width {
+    &__sub-container--width {
         @include tablet {
-            width: 38%;
+            min-width: 32%;
         }
     
         @include desktop {
@@ -66,11 +66,11 @@
 
     &-icon {
     position: relative;
-    top: -8px;
-    left: -8px;
+    top: -0.5rem;
+    left: -0.5rem;
     
     @include tablet {
-    left: 16px;
+    left: 6%;
     }
     }   
 }

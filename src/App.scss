@@ -3,6 +3,9 @@
 
 .App {
   font-family: 'Avenir';
+}
+
+.FlexParent {
   padding-left: 16px;
   padding-right: 16px;
 
@@ -12,11 +15,6 @@
 
   @include desktop {
     padding: 0;
-  }
-}
-
-.FlexParent {
-  @include desktop {
     display: flex;
     justify-content: space-between;
   }
@@ -47,4 +45,10 @@
     border-left: 1px solid #e1e1e1;
     padding-left: 24px;
   }
+}
+
+.upload-btn {
+  position: absolute;
+  left: 20px;
+  top: 0.8rem;
 }

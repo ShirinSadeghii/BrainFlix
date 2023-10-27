@@ -1,20 +1,20 @@
 import logo from './assets/Images/BrainFlix-logo.svg';
-import '../src/App.scss'
-import Header from './components/Header/Header';
-import SelectedVideo from './components/SelectedVideo/SelectedVideo';
-import VideoList from './components/VideoList/VideoList';
-import Comments from './components/Comments/Comments';
+import '../src/App.scss';
 import { useState } from 'react';
-import VideosJson from './data/video-details.json';
+import VideoDetailsJson from './data/video-details.json';
+import VideosJson from './data/videos.json';
 import { setSelectionRange } from '@testing-library/user-event/dist/utils';
-import SelectedDescription from './components/SelectedDescription/SelectedDescription';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage/HomePage';
+import UploadPage from './pages/UploadPage/UploadPage';
+
 
 
 
 function App() {
 
-const [videoData, setVideoData] = useState(VideosJson)
-const [selectedVideo, setSelectedVideo] = useState(VideosJson[0])
+const [videoData, setVideoData] = useState(VideoDetailsJson)
+const [selectedVideo, setSelectedVideo] = useState(VideoDetailsJson[0])
 
 function handleVideoSelection(id) {
   const foundVideo = videoData.find((video) => video.id === id);
@@ -23,9 +23,13 @@ function handleVideoSelection(id) {
 
   return (
     <div className='App'>
-      <Header />
-      <SelectedVideo selectedVideo={selectedVideo} />
-      <div className='FlexParent'>
+      <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<HomePage />} />
+        <Route path='/upload' element={<UploadPage />} />
+      </Routes>
+      {/* <SelectedVideo selectedVideo={selectedVideo} /> */}
+      {/* <div className='FlexParent'>
         <div className='FlexBox1'>
           <SelectedDescription selectedVideo={selectedVideo} />
           <Comments videoData={videoData} selectedVideo={selectedVideo} handleVideoSelection={handleVideoSelection}  />
@@ -33,7 +37,8 @@ function handleVideoSelection(id) {
         <div className='FlexBox2'>
           <VideoList videoData={videoData} selectedVideo={selectedVideo} handleVideoSelection={handleVideoSelection} />
         </div>
-      </div>
+      </div> */}
+      </BrowserRouter>
     </div>
   );
 }

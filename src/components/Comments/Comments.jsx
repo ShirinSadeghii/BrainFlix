@@ -10,7 +10,7 @@ const commentDate = date.toLocaleDateString("en-US");
 
     return (
         <>
-        <h3 className='new-comment__title'>3 Comments</h3>
+        <h3 className='new-comment__title'>{props.selectedVideo.comments.length} Comments</h3>
         <div className='new-comment'>
             <div className='avatar__container'>
                 <img src={mohan} alt="mohan" className='mohan mohan--remove-margin' />
@@ -24,10 +24,33 @@ const commentDate = date.toLocaleDateString("en-US");
                     <button className='new-comment__button'>COMMENT</button>
                     <img src={comment} alt="add comment" className='add-comment-logo' />
                 </div>
-               
             </form>
         </div>
+        <div className="comment">
         <ul className="comment__list">
+          {/* Using map to loop through all comments */}
+          {props.selectedVideo.comments.map((comment) => {
+            return (
+                <li className='comment__item'>
+                    <div className='comment__avatar'></div>
+                    <div className='comment__container'>
+                        <div className='comment__title'>
+                            <span className='name--bold' >{comment.name}</span>
+                            <span className='sub-title--color'>{new Date(comment.timestamp).toLocaleDateString()}</span>
+                        </div>
+                        <p className='comment__paragraph'>{comment.comment}</p>
+                    </div>
+                </li>
+            );
+          })}
+        </ul>
+      </div>
+
+
+
+
+
+        {/* <ul className="comment__list">
             <li className='comment__item'>
                 <div className='comment__avatar'></div>
                 <div className='comment__container'>
@@ -60,7 +83,7 @@ const commentDate = date.toLocaleDateString("en-US");
                     <p className='comment__paragraph'>{props.selectedVideo.comments[2].comment}</p>
                 </div>
             </li>
-        </ul>
+        </ul> */}
         </>
     );
 }

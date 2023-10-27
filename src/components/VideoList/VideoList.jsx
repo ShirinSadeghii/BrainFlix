@@ -1,7 +1,6 @@
 import '../VideoList/VideoList.scss'
 
 function VideoList(props) {
-    // console.log(props);
     return (
         <>
         <h3 className='video-list__title'>NEXT VIDEOS</h3>
@@ -17,9 +16,9 @@ function VideoList(props) {
                         <div className='image__container'>
                             <img src={video.image} alt="video image" className="images" />
                         </div>
-                        <div className='title__container'>
-                            <h3 className='title__item' >{video.title}</h3>
-                            <p className='title__paragraph'>{video.channel}</p>
+                        <div className='title-container'>
+                            <h3 className='title-container__header' >{video.title}</h3>
+                            <p className='title-container__paragraph'>{video.channel}</p>
                         </div>
                     </div>
                 
