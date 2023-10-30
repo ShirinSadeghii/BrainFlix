@@ -46,7 +46,6 @@
             display: flex;
             min-width: 26%;
             justify-content: space-between;
-    
         }
     
         @include desktop {
@@ -65,28 +64,26 @@
     }
 
     &-icon {
-    position: relative;
-    top: -0.5rem;
-    left: -0.5rem;
+        position: relative;
+        top: -0.5rem;
+        left: -0.5rem;
     
-    @include tablet {
-    left: 6%;
-    }
+        @include tablet {
+        left: 6%;
+        }
     }   
-}
 
+    &__sub-title {
+        padding-bottom: 16px;
 
+        &--bold {
+            font-weight: 700;
+        }
 
-.hero__sub-title {
-    padding-bottom: 16px;
-
-    &--bold {
-        font-weight: 700;
+        &--color {
+            color: #afafaf;
+        }
     }
 }
-    
 
-.sub-title--color {
-    color: #afafaf;
-}
 

@@ -1,5 +1,3 @@
-import { useState } from "react";
-import axios from "axios";
 import Header from "../../components/Header/Header";
 import UploadedVideo from "../../components/UploadedVideo/UploadedVideo";
 

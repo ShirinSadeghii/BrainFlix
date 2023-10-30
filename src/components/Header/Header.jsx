@@ -3,10 +3,20 @@ import upload from '../../assets/Images/Icons/upload.svg';
 import search from '../../assets/Images/Icons/search.svg';
 import mohan from '../../assets/Images/Mohan-muruge.jpg';
 import './Header.scss';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 function Header() {
+
+const navigate = useNavigate();
+
+function handleClick(event) {
+    const navigateUpload = () => {
+    navigate('/upload');
+    }
+    navigateUpload();
+}
+
     return (
         <nav className="nav">
             <div className='nav-img__container'>
@@ -20,7 +30,7 @@ function Header() {
                     <img className="search-icon" src={search} alt="search icon"/>
                     <img className="mohan" src={mohan} alt="Mohan" />            
                 </form>
-                <button className="nav__button">UPLOAD 
+                <button onClick={handleClick} className="nav__button">UPLOAD 
                     <img className="upload-btn" src={upload} alt="upload icon"/>
                 </button>
             </div>

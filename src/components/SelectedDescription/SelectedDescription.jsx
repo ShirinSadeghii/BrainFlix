@@ -16,9 +16,9 @@ const newDate = date.toLocaleDateString("en-US");
                     </div>
                     <div className='hero__sub-container hero__sub-container--width'>
                         <img src={views} alt='views icon' className='hero-icon sub-title--color' />
-                        <span className='hero__sub-title sub-title--color'>{props.selectedVideo.views}</span>
+                        <span className='hero__sub-title hero__sub-title--color'>{props.selectedVideo.views}</span>
                         <img src={likes} alt='likes icon' className='hero-icon sub-title--color' />
-                        <span className='hero__sub-title sub-title--color'>{props.selectedVideo.likes}</span>
+                        <span className='hero__sub-title hero__sub-title--color'>{props.selectedVideo.likes}</span>
                     </div>  
                 </div>
                 <div>

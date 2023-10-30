@@ -1,19 +1,48 @@
+@use '../../styles/partials/mixins' as *;
 
 .video-upload {
     padding: 0 1rem 0;
     border-top: 1px solid #E1E1E1;
 
+    @include tablet {
+        padding: 0 2.25rem;
+    }
+
+    @include desktop {
+        padding: 0 136px;
+    }
+
+    &__title {
+        @include tablet {
+            font-size: 44px;
+            padding: 2.25rem 0;
+            border-bottom: 1px solid #E1E1E1;
+        }
+    }
+
     &__container {
         display: flex;
         flex-direction: column;
         width: 100%;
+
+        @include tablet {
+            width: 55%;
+        }
+
+        @include desktop {
+            width: 40%;
+        }
     }
 
     &__label {
         color: #afafaf;
-        padding-bottom: 4px;
+        padding-bottom: 8px;
         padding-top: 16px;
         font-weight: 700;
+
+        @include tablet {
+            padding-top: 1.5rem;
+        }
 
         &--padding {
             padding-top: 24px;
@@ -57,13 +86,43 @@
     }
 }
 
+.flex-container {
+    @include desktop {
+        display: flex;
+    }
+}
+
 .video__form {
     display: flex;
     flex-direction: column;
+
+    @include desktop {
+        width: 70%;
+        padding-left: 24px;
+    }
 }
 
-.button__container {
-    position: relative;
+.button {
+    @include tablet {
+        display: flex;
+        justify-content: end;
+        border-top: 1px solid #e1e1e1;
+        padding-top: 2.25rem;
+    }
+
+    &__container {
+        position: relative;
+
+        @include tablet {
+            width: 30%;
+            order: 2;
+        }
+
+        @include desktop {
+            width: 20%;
+        }
+    }
+
 }
 
 .cancel-btn {
@@ -72,4 +131,15 @@
     color: #0095FF;
     font-weight: 700;
     padding-top: 25px;
+
+    @include tablet {
+        margin-block-start: 0;
+        width: 30%;
+        padding-top: 0.6rem;
+        order: 1;
+    }
+
+    @include desktop {
+        width: 20%;
+    }
 }

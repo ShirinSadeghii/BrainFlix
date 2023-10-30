@@ -62,6 +62,17 @@
         }
     }
 
+    &__btn-container {
+        position: relative;
+
+        @include tablet {
+            display: flex;
+            height: 2.5rem;
+            align-items: center;
+            
+        }
+    }
+
     &__button {
         background-color: #0095FF;
         color: white;
@@ -90,16 +101,6 @@
     }
 }
 
-.button__container {
-    position: relative;
-
-    @include tablet {
-        display: flex;
-        height: 2.5rem;
-        align-items: center;
-        
-    }
-}
 textarea:focus {
     border: 2px solid #0095FF;
 }
