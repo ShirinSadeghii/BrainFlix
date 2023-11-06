@@ -2,12 +2,12 @@ import '../SelectedVideo/SelectedVideo.scss';
 
 
 function SelectedVideo(props) {
-    console.log("props:", props)
 
+    const baseUrl = "http://localhost:8080";
     return (
         <div>
             <div className='main'>
-                <video poster={props.selectedVideo.image} alt="Now Playing Video" className='hero-video' controls/>
+                <video poster={`${baseUrl}/images/${props.selectedVideo.image}`} alt="Now Playing Video" className='hero-video' controls/>
             </div>
             
       </div>

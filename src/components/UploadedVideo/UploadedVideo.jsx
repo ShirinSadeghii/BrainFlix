@@ -25,13 +25,13 @@ const handleVideoSubmit = async (event) => {
     }
 };
 
-// function handleClick(event) {
-//     alert("upload is complete");
-//     const navigateHome = () => {
-//     navigate('/');
-//     }
-//     navigateHome();
-// }
+function handleClick (event) {
+    const cancelSubmit = () => {
+        navigate("/");
+        alert("upload cancelled");
+    }
+    cancelSubmit();
+}
 
     return (
         <div className='video-upload'>
@@ -46,16 +46,14 @@ const handleVideoSubmit = async (event) => {
                     <input className='video-upload__text' type='text' name='title' placeholder='Add a title to your video'></input>
                     <label className='video-upload__label video-upload__label--padding'>ADD A VIDEO DESCRIPTION</label>
                     <textarea className='video-upload__text video-upload__text--height' name="description" placeholder='Add a description to your video'></textarea>
-                    <button className='video-upload__button'>PUBLISH</button>
+                    <div className='button'> 
+                        <div className='button__container'>
+                            <button className='video-upload__button'>PUBLISH</button>
+                            <img className='upload-btn' src={upload} alt="upload-icon"></img>
+                        </div >
+                        <button onClick={handleClick} className='cancel-btn'>CANCEL</button>
+                    </div>
                 </form>
-            </div>
-            
-            <div className='button'>
-                 <div className='button__container'>
-                    <button className='video-upload__button'>PUBLISH</button>
-                    <img className='upload-btn' src={upload} alt="upload-icon"></img>
-                </div>
-                <p className='cancel-btn'>CANCEL</p>
             </div>
         </div>
     )   

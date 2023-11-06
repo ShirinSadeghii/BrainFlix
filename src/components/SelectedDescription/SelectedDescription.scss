@@ -1,9 +1,6 @@
 @use '../../styles/partials/mixins' as *;
 
 .hero {
-    @include desktop {
-        height: 18rem;
-    }
 
     &__title {
         @include tablet {

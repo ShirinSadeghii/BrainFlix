@@ -2,6 +2,9 @@ import '../VideoList/VideoList.scss';
 import { Link } from 'react-router-dom';
 
 function VideoList(props) {
+
+const baseUrl = "http://localhost:8080";
+
     return (
         <>
         <h3 className='video-list__title'>NEXT VIDEOS</h3>
@@ -13,7 +16,7 @@ function VideoList(props) {
                     <Link to={`/${video.id}`}>
                         <div className='item__container'>
                             <div className='image__container'>
-                                <img src={video.image} alt="video image" className="images" />
+                                <img src={`${baseUrl}/images/${video.image}`} alt="video image" className="images" />
                             </div>
                             <div className='title-container'>
                                 <h3 className='title-container__header' >{video.title}</h3>
