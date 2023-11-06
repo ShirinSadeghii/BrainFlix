@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function VideoList(props) {
 
-const baseUrl = "http://localhost:8080";
+    const baseUrl = process.env.REACT_APP_BASE_URL;
 
     return (
         <>

@@ -88,6 +88,11 @@
     }
 }
 
+::placeholder {
+    color: #323232;
+    font-weight: 400;
+}
+
 .flex-container {
     @include desktop {
         display: flex;

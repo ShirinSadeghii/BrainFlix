@@ -12,8 +12,7 @@ function HomePage() {
 const [videoData, setVideoData] = useState([])
 const [selectedVideo, setSelectedVideo] = useState({})
 
-const baseUrl = "http://localhost:8080";
-// const baseUrl = process.env.REACT_APP_BASE_URL;
+const baseUrl = process.env.REACT_APP_BASE_URL;
 
 
 const params = useParams();

@@ -3,7 +3,7 @@ import '../SelectedVideo/SelectedVideo.scss';
 
 function SelectedVideo(props) {
 
-    const baseUrl = "http://localhost:8080";
+    const baseUrl = process.env.REACT_APP_BASE_URL;
     return (
         <div>
             <div className='main'>

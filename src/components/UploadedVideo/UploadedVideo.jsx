@@ -6,18 +6,18 @@ import '../UploadedVideo/UploadedVideo.scss';
 
 function UploadedVideo() {
 
+const baseUrl = process.env.REACT_APP_BASE_URL;    
 const navigate = useNavigate();
+
 
 const handleVideoSubmit = async (event) => {
     event.preventDefault();
     
     try {
-        const response = await axios.post(`http://localhost:8080/videos`, {
+        const response = await axios.post(`${baseUrl}/videos`, {
             title: event.target.title.value, 
             description: event.target.description.value,
         });
-        console.log(event.target.description.value);
-        console.log(response);
         alert("video uploaded!");
         navigate("/");
     } catch (err) {
@@ -33,7 +33,7 @@ function handleClick (event) {
     cancelSubmit();
 }
 
-    return (
+    return ( 
         <div className='video-upload'>
             <h1 className='video-upload__title'>Upload Video</h1>
             <div className='flex-container'>
@@ -43,9 +43,9 @@ function handleClick (event) {
                 </div>
                 <form  onSubmit={handleVideoSubmit} className='video__form'>
                     <label className='video-upload__label'>TITLE YOUR VIDEO</label>
-                    <input className='video-upload__text' type='text' name='title' placeholder='Add a title to your video'></input>
+                    <input className='video-upload__text' type='text' name='title' placeholder='Add a title to your video' required></input>
                     <label className='video-upload__label video-upload__label--padding'>ADD A VIDEO DESCRIPTION</label>
-                    <textarea className='video-upload__text video-upload__text--height' name="description" placeholder='Add a description to your video'></textarea>
+                    <textarea className='video-upload__text video-upload__text--height' name="description" placeholder='Add a description to your video' required></textarea>
                     <div className='button'> 
                         <div className='button__container'>
                             <button className='video-upload__button'>PUBLISH</button>
