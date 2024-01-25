@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# BrainFlix Front-End Showcase #
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Overview ##
 
-## Available Scripts
+Embark on a journey to showcase my prowess in front-end development through the BrainFlix project. Tasked with building a prototype for a video streaming platform, this endeavor involves transforming static designs into a functioning and responsive app prototype.
 
-In the project directory, you can run:
+## Tools & Resources ##
 
-### `npm start`
+create-react-app: Rapidly initializing a React starter project.
+sass npm package: Harnessing the power of SCSS for streamlined styling.
+npm: Seamless installation of JavaScript libraries.
+
+## Front-End Only (API in Seperate Repo) ##
+
+### Dynamic Components ###
+
+* Crafting dynamic components that render using live data, not hardcoded HTML. Made for seamless integration of comments, current video details, and video-list sections.
+
+### Responsive Interaction ###
+
+* Elevating user experience through clickable side videos. With a click, the magic the Main Video section gracefully updates to display the details and comments of the selected video.
+
+### React ###
+
+* Leveraging React concepts to orchestrate a UI responding dynamically to user interactions.
+
+### Visual Design Excellence ###
+* Achieving pixel-perfect responsiveness at and between breakpoints, utilizing a mobile first layout, a testament to my dedication to visual design precision.
+
+### State Management Mastery ###
+
+* Mastering state management to seamlessly pass down data as props, enabling the generation of side-videos and main-video content, including dynamic comments.
+
+### SASS Elegance ###
+
+* Embracing SASS for styling, unleashing the power of variables and other features to streamline and elevate the codebase.
+
+### Flexbox Layout ###
+
+* Exercising Flexbox brilliance for layout control, ensuring a harmonious visual experience across the entire application.
+
+
+### In the project directory, you can run: ###
+
+#### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
