@@ -1,7 +1,7 @@
 # BrainFlix Front-End Showcase #
 
 ## Images: ##
-https://imgur.com/gallery/YQOMzUC
+<a href="//imgur.com/a/YQOMzUC">BrainFlix Portfolio</a>
 
 ## Project Overview ##
 
