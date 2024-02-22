@@ -1,5 +1,8 @@
 # BrainFlix Front-End Showcase #
 
+## Images: ##
+https://imgur.com/gallery/YQOMzUC
+
 ## Project Overview ##
 
 Embark on a journey to showcase my prowess in front-end development through the BrainFlix project. Tasked with building a prototype for a video streaming platform, this endeavor involves transforming static designs into a functioning and responsive app prototype.
